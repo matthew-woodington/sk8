@@ -207,8 +207,10 @@ nav ul li a {
 .skateboarders .sk8er-id img {
     height: 100%;
     width: auto;
+    position: relative;
     object-fit: cover;
     object-position: center;
+
 }
 
 .skateboarders .long-row {
@@ -218,6 +220,10 @@ nav ul li a {
 #steve, #tommy {
     width: 100%;
     height: 100%;
+}
+
+#lance {
+    right: 80px;
 }
 
 .skateboarders .sk8er-id {
@@ -394,6 +400,10 @@ nav ul li a {
 
     .skateboarders .sk8er-id {
         margin: 10px 0 10px 0;
+    }
+
+    #lance {
+        right: auto;
     }
 
     .long-row {
