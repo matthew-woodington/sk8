@@ -19,6 +19,8 @@ a {
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg");    
     background-position: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
 
@@ -80,7 +82,7 @@ nav ul li a {
 .nav-buttons {
     width: 100%;
     position: relative;
-    margin: 0;
+    margin: 0 0 15px 0;
 }
 
 .nav-buttons .btn {
@@ -92,9 +94,8 @@ nav ul li a {
 }
 
 .nav-buttons .btn a {
-    position: relative;
+    display: inline-block;
     width: 100%;
-    height: 100%;
     color: #fff;
     text-transform: uppercase;
     font-family: "PT+Sans", Arial, Helvetica, sans-serif;
@@ -127,6 +128,8 @@ nav ul li a {
 
 .top-image .logo {
     position: absolute;
+    height: 200px;
+    width: auto;
     top: 10%;
     left: 10%;
     z-index: 20;
@@ -139,8 +142,7 @@ nav ul li a {
 
 .news {
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     position: relative;
 }
 
@@ -188,6 +190,7 @@ nav ul li a {
 
 .skateboarders {
     margin-bottom: 30px;
+    margin: auto;
 }
 
 .skateboarders .sk8er-id .wrap {
@@ -244,24 +247,24 @@ nav ul li a {
 /* ---- boards ---- */
 
 .boards {
-    width: auto;
-    position: relative;
-}
-
-.boards .image-container {
     width: 100%;
-    height: 265px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    margin: 0;
-    overflow: auto;
+    height: 270px;
+    background-color: #fff;
+    margin: 20px auto;
 }
 
-.boards img {
-    rotate: 90deg;
+.board {
+    position: relative;
+    height: 265px;
     width: auto;
+    padding: 5px;
+}
+
+.board img {
+    position: absolute;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    width: 265px;
 }
 
 /* ---- end boards ---- */
@@ -271,8 +274,7 @@ nav ul li a {
 .contact {
     width: 100%;
     background-color: #fff;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin: 30px auto 50px auto;
     padding: 20px;
 }
 
@@ -330,7 +332,75 @@ nav ul li a {
         justify-content: center;
     }
 
+    nav ul {
+        padding: 0;
+    }
+
+    .top-image {
+        height: 300px;
+    }
+
+    .top-image .logo {
+        height: 80px;
+        width: auto;
+        top: 5%;
+        left: 5%;
+    }
+
     .news .news-article {
         height: 100%;
+    }
+
+    .boards {
+        width: 100%;
+        height: auto;
+    }
+
+    .board {
+        height: auto;
+        width: 265px;
+    }
+
+    .board img {
+        width: auto;
+        transform: initial;
+        position: relative;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .news .news-article {
+        margin: 20px 0;
+        min-height: initial;
+    }
+
+    .top-image .logo {
+        height: 150px;
+        width: auto;
+        top: 8%;
+        left: 8%;
+    }
+
+    .skateboarders .wrap {
+        width: 100%;
+    }
+
+    .skateboarders .wrap img {
+        width: 100%;
+        height: auto;
+    }
+
+    .skateboarders .sk8er-id {
+        margin: 10px 0 10px 0;
+    }
+
+    .long-row {
+        padding: 0;
+    }
+
+    .contact {
+        margin: 30px 0 50px 0;
     }
 }
